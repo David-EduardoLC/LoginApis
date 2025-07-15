@@ -1,0 +1,282 @@
+/* Paginación centrada */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #e0e7ff;
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.pagination button.active {
+  background: #43e97b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.pagination button:hover:not(.active) {
+  background: #baf7c4;
+  color: #222;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Modal styles */
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 32px 28px;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.modal-lg {
+  min-width: 480px;
+  max-width: 600px;
+  padding: 48px 36px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal button {
+  margin: 12px 8px 0 8px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #baf7c4;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal button:hover {
+  background: #43e97b;
+}
+
+/* Botones de acción */
+.action-btn {
+  margin: 0 4px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #e0e7ff;
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-btn:hover {
+  background: #baf7c4;
+  color: #222;
+}
+
+/* General */
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #fff 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 24px;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .brand {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar .nav-right a,
+.navbar .nav-right button {
+  margin-left: 16px;
+  background: transparent;
+  border: none;
+  color: #222;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .nav-right a:hover,
+.navbar .nav-right button:hover {
+  text-decoration: underline;
+  color: #111;
+}
+
+/* Contenedor principal */
+.rick-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #222;
+  text-align: center;
+}
+
+/* Tabla */
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+table.personajes-table {
+  width: 90%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+thead {
+  background: linear-gradient(90deg, #baf7c4 0%, #eaffea 100%);
+}
+
+th, td {
+  padding: 18px 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  color: #222;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.2s;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tr:hover {
+  background: #f4f8ff;
+}
+
+.personaje-avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Enlace de regreso */
+a.back {
+  display: inline-block;
+  margin-top: 30px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+a.back:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  background: #2563eb;
+  color: #fff;
+  padding: 18px 32px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header nav {
+  display: flex;
+  gap: 18px;
+}
+
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  transition: text-decoration 0.2s;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .table-wrapper {
+    padding: 0 4px;
+  }
+  table.personajes-table th, table.personajes-table td {
+    padding: 8px 2px;
+    font-size: 0.95rem;
+  }
+  .personaje-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
